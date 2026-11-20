@@ -160,6 +160,7 @@ body {
 
 .main-header-left-item-button {
   width: 60px;
+  height: 46px;
   font-size: 14px;
   color: #858796;
 }
@@ -169,12 +170,14 @@ body {
 }
 
 .main-header-left-item-button svg path,
-.main-header-right-item svg {
+.main-header-right-item svg,
+.section-content-item-menu svg {
   fill: #858796;
 }
 
 .main-header-left-item-button:hover svg path,
-.main-header-right-item:hover svg {
+.main-header-right-item:hover svg,
+.section-content-item-menu a:hover svg {
   fill: #3d63d2;
 }
 
@@ -186,11 +189,11 @@ body {
   display: none;
   width: 150px;
   position: absolute;
-  top: 44px;
+  top: 46px;
   left: -4px;
 }
 
-.popup-parent:active .header-popup {
+.popup-parent:hover .header-popup {
   display: block;
 }
 
@@ -232,14 +235,18 @@ body {
   color: #b3b3b3;
 }
 
-.main-header-right-item-content button {
-  border-radius: 10px;
+.main-header-right-item-content button,
+.section-button button {
   background: #467df2;
   border: none;
   padding: 10px 18px;
   font-weight: 700;
   font-size: 14px;
   color: #fff;
+}
+
+.button-upload {
+  border-radius: 10px;
 }
 
 .main-header-right-item-content button:hover {
@@ -336,10 +343,21 @@ body {
   text-decoration: none;
 }
 
-.section-content-item-menu svg {
-  fill: #858796;
+.section-button {
+  position: fixed;
+  transform: rotate(-90deg);
+  right: -75px; /*for rotation*/
+  top: 50%;
 }
 
-.section-content-item-menu a:hover svg {
-  fill: #3d63d2;
+.button-support {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px 10px 0 0;
+}
+
+.button-support:hover {
+  background: #2f54a3;
+  padding-bottom: 20px;
 }
